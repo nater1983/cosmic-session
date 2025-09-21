@@ -74,6 +74,7 @@ async fn main() -> Result<()> {
 			.with(env_filter)
 			.try_init()
 			.wrap_err("failed to initialize logger")?;
+    #[cfg(debug_assertions)]
 		warn!("failed to connect to journald")
 	}
 
